@@ -1,0 +1,64 @@
+$content-width: 1132px;
+$margin-center: 0 auto;
+
+$body-bg: 				#FFF;
+$text-white: 			#FFF;
+$bkg-white: 			#FFF;
+$text-grey-footer: 		#585858;
+$text-green:			#6cb33e;
+$color-btn-default:		#6cb33e;
+$color-btn-hover:		mix($color-btn-default, #000, 80%);
+$color-btn-text:		#FFF;
+$color-btn-submit: 		#00718f;
+$color-btn-submit-hover:mix($color-btn-submit, #000, 80%);
+$color-nav-link: 		#787878;
+$color-aside-link:		#6cb33e;
+$color-nav-link-hover:	#6cb33e;
+$color-link-hover:		#00718f; // #787878
+$color-aside-date:		#787878;
+$color-cards-text:		#787878;
+
+$color-border:			#dddddd;
+$color-content-border:	#6cb33e;
+
+$color-bg-lightgrey:	#f7f7f7;
+$color-bio-band:		mix(#000000, #f7f7f7, 5%);
+
+$color-body-text:		#353535;
+$color-grey:			#CCCCCC;
+$color-text-lightgrey:	#585858;
+
+$pica:					1.6rem; // =16px
+$fontSize-body-text: 	1.6rem; // =16px 
+$fontSize-btn: 			1.6rem; // =16px 
+$fontSize-footer: 		1.4rem; // =14px
+$fontSize-accordion-title:	2rem; 	// =20px
+$fontSize-aside-title:	2rem; 	// =20px
+$fontSize-aside-text:	1.8rem; // =18px
+$fontSize-cards-text:	2.4rem; // =24px
+$fontLineHeight-cards:	3.2rem; // =32px
+$fontLineHeight-body:	2.8rem; // =28px
+$fontLineHeight-h2:		5.3rem; // =53px
+$fontSize-article-h2:	4.1rem; // =41px ??
+
+$myriadLight:	 'Myriad W01 Lt', sans-serif;
+$myriadRegular:	 'Myriad W01 Regular', sans-serif;
+$myriadSmBd:	 'Myriad W01 SmBd', sans-serif;
+$myriadBold:	 'Myriad W01 Bd', sans-serif;
+$myriadBlack:	 'Myriad W01 Black', sans-serif;
+$myriadSmBdSmCnd:'Myriad W01 SmBd Sm Cnd', sans-serif;
+$myriadBdSmCnd:  'Myriad W01 Bd Sm Cnd', sans-serif;
+$myriadlackSmCnd:'Myriad W01 Black Sm Cnd', sans-serif;
+$myriadCnd:		 'Myriad W01 Cnd', sans-serif;
+$myriadSmBdCnd:  'Myriad W01 SmBd Cnd', sans-serif;
+$myriadBdCnd:	 'Myriad W01 Bd Cnd', sans-serif;
+
+$merriweather: 	'Merriweather', serif;
+
+// $myriadRegular: 'Myriad W08 Regular', sans-serif;
+// $myriadLight: 	'Myriad W01 Lt', sans-serif;
+// $myriadBold: 	'Myriad W08 Bold_1166607', sans-serif;
+
+$light:			300;
+$regular: 		400;
+$bold: 			700;

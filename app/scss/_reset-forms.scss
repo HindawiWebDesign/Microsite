@@ -1,0 +1,352 @@
+/* ----------------------------------------------------------------------------------------------------
+Forms Reset
+----------------------------------------------------------------------------------------------------*/
+
+/* General */
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type=date], input[type=text], input[type=password],
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	
+/* Browsers have different default form fonts */
+  // font-family: 'Myriad W08 Regular', Times !important;
+  // font-size: 15px;
+}
+ 
+/* Remove the stupid outer glow in Webkit */
+input:focus,
+select:focus
+{
+	outline:0;
+}
+ 
+/* Box Sizing Reset
+-----------------------------------------------*/
+ 
+/* All of our custom controls should be what we expect them to be */
+input
+{
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+textarea
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select
+{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+ 
+/* Text Inputs
+-----------------------------------------------*/
+ 
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week]
+{
+  // font-family: 'Myriad W08 Regular', Times !important;
+  // font-size: 15px;
+	
+  	height: 32px;	
+	border-radius: 0px;
+	line-height: 19px;	
+	background-color: #FFFFFF;
+	border: 1px solid #dddddd;
+	padding-left: 8px;
+	padding-right: 8px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	
+  box-sizing: border-box;
+  appearance: none;
+}
+ 
+/* Button Controls
+-----------------------------------------------*/
+ 
+input[type=checkbox],
+input[type=radio]
+{
+	width:13px;
+	height:13px;
+	-moz-binding: none;
+	-moz-box-sizing: border-box;
+	
+	margin:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	line-height:1;
+	
+
+}
+
+label {
+
+}
+
+/* File Uploads
+-----------------------------------------------*/
+ 
+input[type=file] {
+	// font-family: $merriweather;
+	// font-size: $pica;
+}
+
+::-ms-browse {
+	// font-family: $merriweather;
+	// font-size: $pica;
+    // line-height: 19px !important;
+    background-color: #fff;
+    border: 0 solid #FFFFFF;
+    // color: #000000;
+    cursor: pointer;
+    // height: 26px;
+    // margin: 0 8px 0 0;
+    // padding: 0 6px;
+    width: auto;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-text-size-adjust: 100%;
+}
+::-moz-file-upload-button {
+// font-family: 'Myriad W01 Lt', Times !important;
+//     font-size: 15px;
+//     line-height: 19px !important;
+//     background-color: #DADADA;
+    border: 0 solid #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    height: 26px;
+    margin: 0 8px 0 0;
+    padding: 0 6px;
+    width: auto;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-text-size-adjust: 100%;
+}
+::-webkit-file-upload-button {
+// font-family: 'Myriad W01 Lt', Times !important;
+//      font-size: 15px;
+//      line-height: 19px !important;
+//		background-color: #DADADA;
+    border: 0 solid #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    height: 26px;
+    margin: 0 8px 0 0;
+    padding: 0 6px;
+    width: auto;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-text-size-adjust: 100%;
+}
+::-webkit-file-upload-button:hover {
+    background-color: #00718F;
+    color: #fff;
+}
+input[type=file]  {
+/*	width:266px; */
+	margin-right:0px;
+}
+
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+input[type=file]  {
+	min-width:212px;
+	max-width:212px;
+}
+}
+input[type=file]  {
+	background-color: transparent\0; /* ie8, ie9, ie10, ie11 only */
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* ie10, ie11+ */
+input[type=file] {
+	background-color: transparent;
+}
+}
+ 
+/* Search Input
+-----------------------------------------------*/
+ 
+/* Make webkit render the search input like a normal text field */
+input[type=search]
+{
+	-webkit-appearance:textfield;
+	-webkit-box-sizing:content-box;
+}
+ 
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration
+{
+	display:none;
+}
+ 
+/* Buttons
+-----------------------------------------------*/
+ 
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]
+{
+	/* Fix IE7 display bug */
+	overflow:visible;
+	width:auto;
+}
+input.btn-default, button.btn-default, button, a.btn-default,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-webkit-appearance: none;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-text-size-adjust: 100%;
+}
+.btn-default:hover, input.btn-default:hover, button:hover, a.btn-default:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+	// color: #fff;
+}
+
+a.btn-default, a.btn-default:hover {
+    // padding-top: 3px;
+    display: inline-block;
+    vertical-align: top;
+	text-decoration: none;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/* for ipad */
+@media screen and (max-device-width: 1024px){
+input.btn-default, button.btn-default, button, a.btn-default,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	// height:25px;
+	// padding-left:6px;
+	// padding-right:6px;
+	// margin-left:0px;
+	// font-family: $merriweather;
+	// font-size: $pica;
+	// padding-bottom:2px;
+}
+input.text-input  {
+	-moz-user-modify:read-write !important;
+	background:none repeat scroll 0px 0px transparent !important;
+	-moz-border-radius:0px !important;
+	-webkit-border-radius:0px !important;
+	// height:18px;
+	// line-height:18px;
+	// font-size:14px;
+}
+input.btn-default {
+	-moz-border-radius:0px !important;
+	-webkit-border-radius:0px !important;
+	-webkit-appearance: none;
+	-webkit-box-align: center;
+	-webkit-box-sizing: border-box;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-webkit-text-size-adjust:100%;
+	// height:19px;
+	// width:28px;
+	// padding:0px 0px 2px 0px;
+	// margin:0 0 1px;
+	// line-height:19px;
+	// font-size:15px;
+}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+input.text-input {
+	// width: 184px;
+}
+input.btn-default {
+	// padding: 1px 0
+}
+}
+
+
+::-webkit-input-placeholder {
+   color: #585858;
+}
+
+:-moz-placeholder {
+   color: #585858;
+}
+
+::-moz-placeholder { 
+   color: #585858;
+}
+
+:-ms-input-placeholder {  
+   color: #585858;
+}

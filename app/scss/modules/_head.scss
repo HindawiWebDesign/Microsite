@@ -1,0 +1,332 @@
+// Header
+
+header {
+	width: 100%;
+	margin: 0;
+    padding: 0;
+    display: block;
+    height: 100%;
+    border-bottom: 1px solid $color-border;
+
+	.container {
+		@include container($content-width, $margin-center);
+		padding: 0 $pica 0 $pica;
+		margin-top: $pica;
+	    margin-bottom: $pica;
+	    min-height: 72px;
+	}
+	.logo {
+		    width: 72px;
+		    height: 72px;
+		    outline: 0 none;
+		    line-height: 0;
+		    float: left;
+	}
+	nav {
+		    max-width: calc(100% - 72px);
+		    width: calc(100% - 72px);
+		    position: absolute;
+		    bottom: -8px;
+		    right: 0;
+
+		ul {
+			    padding: 0;
+			    margin: 0 0 0 $pica*3;
+			    position: relative;
+
+			li {
+					display: inline-block;
+					list-style-type: none;
+					font: 18px/24px $myriadRegular;
+					margin-right: $pica*1.5;
+					padding: 0;
+
+				a {
+					text-decoration: none;
+					color: $color-nav-link;
+					
+					&:hover { 
+						color: $color-nav-link-hover;
+					}
+				}					
+			}
+
+			li:last-child {
+					right: 0;
+				    position: absolute;
+				    height: $pica*2;
+				    bottom: $pica/2;
+				    margin-right: $pica;
+			}
+			li.current_page_item {
+
+				a {
+					text-decoration: none;
+					color: $color-nav-link-hover;
+					&:hover { 
+						// color: $color-nav-link;
+					}
+				}
+
+			}
+		}
+	}
+	.social {
+		display: inline-block;
+		padding: 0;
+		float: right;
+		// margin-right: -8px;
+
+		.social__icons {
+
+			a {
+				// border: 1px solid #ccc;
+				text-align: center;
+				color: $color-grey;
+				float: left;
+				margin: 0;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+
+				&:last-child {
+					width: 24px;
+					text-align: right;
+				}
+				&:hover {
+					color: $color-link-hover; 
+				}
+			}
+		}
+	}
+}
+
+// /* small phones */
+// @media screen and (max-width:320px) {}
+
+// /* Regular smart phones, including iPhone 6 + with 414px viewport! */
+// @media screen and (min-width: 321px) {}
+
+// /* Regular Tablets from 480 to 800px including Galaxy tablets - 768px is only good for iPad */
+// @media screen and (min-width: 481px) {}
+
+// /* Desktops and Laptops */
+// @media screen and (min-width: 801px) {}
+
+
+// Microsite media-queries
+// @media only screen and (max-width:869px)
+// @media only screen and (max-width:869px) and (min-width:701px) 
+// @media only screen and (max-width: 700px)
+// @media screen and (max-width:480px)
+// @media screen and (max-width:320px)
+
+
+
+@media only screen and (max-width:869px) {
+	header {
+		.container {
+	    	padding: 0;
+	    	margin-bottom: 0;
+		}
+		.logo { 
+			margin: 0 0 $pica $pica;
+		}
+
+		nav {
+				padding: $pica $pica 0 $pica;
+				border-top: 1px solid $color-border;
+
+			ul li {
+			    margin-right: 0;
+			    margin-left: 2.4rem;
+			    padding: 0;
+
+			    &:first-child {
+			    	margin-left: 0;
+			    }
+
+			    &.btn-submit {
+				    right: 0;
+				    position: relative;
+				    height: auto;
+				    bottom: 0;
+				    margin-right: 0;
+
+			    	a {
+					    background-color: transparent;
+					    border: 0;
+					    color: #787878;
+					    padding-bottom: 0;
+					    text-transform: capitalize;
+					    width: auto;
+					    padding: 0;
+					    height: 21px;
+					    font: 18px/24px "Myriad W01 Regular", sans-serif;
+
+					    &:hover, &:active, &:focus {
+							background-color: transparent;
+							border-width: 0;
+							color: #6cb33e;
+					    }
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:869px) and (min-width:701px) {
+	header {
+		.social {
+			margin: 4.9rem $pica 0 0;
+		}
+
+		#topnav {
+			clear: both;
+
+			nav {
+			    display: block;
+			    position: relative;
+			    width: 100%;
+			    top: 0;
+			    left: 0;
+			    padding-bottom: 16px;
+			    max-width: 100%;
+			    margin-top: 0;
+			    padding-top: 16px;
+
+			    ul {
+			    	margin: 0;
+					display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    position: relative;
+				    flex-direction: row;
+				    flex-wrap: nowrap;
+				    -webkit-flex-wrap: nowrap;
+				    justify-content: space-between;
+				    -webkit-justify-content: space-between;
+				    flex-flow: row wrap;
+				    -webkit-flex-flow: row wrap;
+				    align-content: stretch;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	header {
+		.social {
+			margin-right: $pica;
+		}
+	#topnav {
+		position: relative;
+		clear: both;
+
+		  #navbtn {
+		    float: right;
+		    right: 0;
+		    top: 0;
+		    width: 24px;
+		    height: 24px;
+		    background-image: url(../img/menu.svg);
+		    background-repeat: no-repeat;
+		    background-position: 0 0;
+		    -webkit-background-size: 100% 100%;
+		    -o-background-size: 100% 100%;
+		    -moz-background-size: 100% 100%;
+		    background-size: 100% 100%;
+		    margin: 0px 0 12px 14px;
+
+		    display: block;
+		    position: absolute;
+		    margin: 0;
+			top: -39px;
+		    right: 16px;
+		  }
+
+		  nav {
+		    display: none;
+		    position: relative;
+		    width: 100%;
+		    max-width: 100%;
+		    margin-top: 0;
+		    padding-top: 0;
+		    bottom: 0;
+
+		    ul { 
+
+				margin: 0;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				position: relative;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				-webkit-flex-wrap: nowrap;
+				justify-content: space-between;
+				-webkit-justify-content: space-between;
+				flex-flow: row wrap;
+				-webkit-flex-flow: row wrap;
+				align-content: stretch;
+
+				li {
+				    display: inline-block;
+				    flex-basis: calc(50% - 0.8rem);
+				    margin-left: 0;
+
+					a {
+				    	display: block;
+					    border-bottom: 1px solid #ddd;
+					    padding-top: 4px;
+					    line-height: 32px;
+					    height: 38px;
+					}
+
+					&.btn-submit a, 
+					&:last-child a,
+					&:nth-last-child(2):nth-child(odd) a {
+						border-bottom-width: 0;
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+
+@media screen and (max-width:480px) {
+	header { 
+
+		#topnav nav ul li {
+			flex-basis: 100%;
+
+			a.btn-submit a, 
+			&:last-child a {
+				border-bottom-width: 0;
+			}
+			&:nth-last-child(2):nth-child(odd) a {
+				border-bottom-width: 1px;
+			}
+		}
+
+		.logo {
+		    width: 60px;
+		    height: 60px;
+		}
+	}
+}
+
+@media screen and (max-width:480px) and (min-width:321px) {
+	
+}
+
+@media screen and (max-width:320px) {
+	
+}
+
+
+

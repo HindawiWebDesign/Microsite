@@ -1,0 +1,49 @@
+@mixin backImage($image, 
+	$height:67.2rem,
+	$bgPos: center center) {
+	background: url($image);
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	background-size: cover;
+	height: $height;
+}
+
+@mixin backImage-max869($image, 
+	$height:48rem,
+	$bgPos: center center) {
+	background: url($image);
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	background-size: cover;
+	height: $height;
+}
+
+@mixin backImage-max700($image, 
+	$height:25.6rem,
+	$bgPos: center center) {
+	background: url($image);
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	background-size: cover;
+	height: $height;
+}
+
+@mixin backImage-max480($image, 
+	$height:auto) {
+	background: none;
+	height: $height;
+}
+
+@mixin container($content-width, $margin-center) {
+	max-width: $content-width;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

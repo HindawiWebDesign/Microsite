@@ -1,0 +1,136 @@
+// aside
+
+aside {
+		min-width: 356px;
+		width: 356px;
+	    margin: $pica*2 0 0 $pica;
+	    font-family: $myriadRegular;
+	    font-size: $fontSize-aside-text;
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding: $pica*2 $pica;
+			margin: 0 0 $pica 0;
+			border: 1px solid $color-border;
+			background-color: $color-bg-lightgrey;
+
+			.title {
+				border-bottom: 1px solid $color-border;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			li {
+				padding: 0 0 0 $pica;
+				margin: 0;
+				border-width: 0;	
+				color: $color-text-lightgrey;	
+				// line-height: $pica*1.4;
+			}
+		}
+	}
+
+	h3 {
+		margin: $pica 0 $pica/4 0;
+		font-family: $myriadRegular;
+		font-size: $fontSize-aside-title;
+	}
+
+	.most-read {
+		background-color: $bkg-white;
+
+		li {
+			margin: 0 0 $pica/2 0;
+			padding: 0;
+			border-bottom: 1px solid $color-border;
+			background-color: $bkg-white;
+
+		.author, time {	
+			display: block;
+		}
+		time {	
+			padding: 0 0 $pica/2 0;
+		}
+
+		&:last-child { 
+			border-width: 0;
+
+			time {
+				padding-bottom: 0;
+			}
+		}
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+		font-family: $merriweather;
+		font-size: $fontSize-body-text;
+	}
+	.categories-list ul {
+		margin-top: $pica;
+	}
+}
+
+// Responsive 
+
+@media only screen and (max-width: 869px) {
+  aside {
+      width: 100%;
+      margin-left: 0;
+
+      .featured-article {
+      	width: 100%;
+      	max-width: 100%;
+      	height: auto;
+
+      	img {
+      		width: 50%;
+
+      	}
+
+      	h3 {
+      		width: 50%;
+      		float: right;
+
+      	}
+      }
+  }
+}
+
+// @media only screen and (max-width:869px) and (min-width:701px) {}
+
+// @media only screen and (max-width: 700px) {}
+
+@media screen and (max-width:480px) {
+	  aside {
+      width: 100%;
+      margin-left: 0;
+
+      .featured-article {
+      	width: 100%;
+      	max-width: 100%;
+      	height: auto;
+
+      	img {
+      		width: 100%;
+
+      	}
+
+      	h3 {
+      		width: 100%;
+      		float: none;
+
+      	}
+      }
+  }
+}
+
+// @media screen and (max-width:320px) {}
+
+
+

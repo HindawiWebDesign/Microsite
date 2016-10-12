@@ -1,0 +1,108 @@
+// http://codepen.io/anon/pen/WGbKwW
+
+.accordion {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.accordion li {
+    position: relative;
+    margin-bottom: 6px;
+    border: 1px solid #dddddd;
+    padding: 0;
+}
+
+.accordion li a {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    padding: 0 $pica*2 0 $pica*3;
+    user-select: none;
+    background-color: #f7f7f7;
+    font-size: 2rem;
+    height: $pica*5;
+}
+
+.accordion a.active {
+    user-select: none;
+    background-color: #fff;
+}
+.accordion li > a > span {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    color: $color-text-lightgrey;
+    font-family: $myriadSmBd;
+    font-size: $fontSize-accordion-title;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.accordion a.active span {
+    background-color: transparent;
+}
+
+.accordion a:after {
+  width: 9px;
+  height: 9px;
+  border-right: 1px solid #4a6e78;
+  border-bottom: 1px solid #4a6e78;
+  content: " ";
+  position: absolute;
+  right: $pica;
+  top: 38px;
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  }
+
+a.active:after {
+  transform: rotate(45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; 
+}
+
+
+
+.accordion li .answer {
+  display: none;
+  margin: 0;
+  border-top: 1px solid $color-border;
+  padding: $pica*2 $pica*3; 
+
+  ul > li {
+    padding: 0 0 0 $pica;
+    border-width: 0;
+    margin: 0;
+  }
+
+  ol > li {
+    padding: 0;
+    border-width: 0; 
+    margin: 0; 	
+  }
+}
+
+
+.accordion .answer a {
+  display: inline;
+  line-height: normal;
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+  font-size: initial;
+
+  &:after {
+  	border-width: 0;
+  }
+  }
+
+
+
+
+
