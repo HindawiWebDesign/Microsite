@@ -23,8 +23,8 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer({
-            // browsers: ['last 2 versions'],
-            // cascade: false
+            browsers: ['last 2 versions'],
+            cascade: false
         }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css'))
@@ -71,7 +71,18 @@ gulp.task('clean:dist', function() {
 //return cache.clearAll(callback)
 //})
 
+gulp.task('autoprefixer', function () {
 
+
+    return gulp.src('app/scss/**/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            // browsers: ['last 2 versions'],
+            // cascade: false
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('dest/style.css'));
+});
 
 
 // gulp watch

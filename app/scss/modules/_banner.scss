@@ -51,9 +51,14 @@
 		//     }
 		// }
 	}
-	// .inner-banner {
-	//     height: 9.6rem;
-	// }
+	.inner-banner {
+	    height: 16rem;
+	}
+}
+@media only screen and (max-height: 800px) {
+	.home-banner {
+		height: $pica*24;
+	}
 }
 
 @media only screen and (max-width: 700px) {
@@ -100,6 +105,7 @@
 		}
 	}
 }
+
 
 // @media screen and (max-width:320px) {}
 

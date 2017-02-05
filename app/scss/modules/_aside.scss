@@ -68,20 +68,56 @@ aside {
 
 	p {
 		margin-bottom: 0;
-		font-family: $merriweather;
+		font-family: Merriweather,serif;
 		font-size: $fontSize-body-text;
+		line-height: inherit;
+		color: $color-body-text;
 	}
-	.categories-list ul {
+	.listing ul {
 		margin-top: $pica;
 	}
 }
 
 // Responsive 
 
+@media only screen and (max-width:1023px) {
+
+  main {
+
+    aside {
+      margin: $pica 0 0 0;
+      width:100%;
+      min-width: auto;
+
+      li, li.only-text {
+        display:none;
+      
+        &.newsletter {
+          display: list-item;
+          width: 100%;
+          margin-bottom:0;
+        }
+      }
+
+      form {
+        max-width: 60%;
+        margin: 0 auto;
+      
+        fieldset .form-field {
+          width: 94%;
+        
+          .frm_submit {
+            width: 7%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 869px) {
-  aside {
-      width: 100%;
-      margin-left: 0;
+
+	main aside {
 
       .featured-article {
       	width: 100%;
@@ -104,30 +140,63 @@ aside {
 
 // @media only screen and (max-width:869px) and (min-width:701px) {}
 
-// @media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 700px) {
+
+    main aside {
+
+	    form {
+			max-width: 70%;
+	    	margin: 0 auto;
+
+			fieldset .form-field {
+			    width: 90%;
+
+				&.frm_submit {
+			    	width: 10%;
+				}
+			}
+		}
+	}
+}
 
 @media screen and (max-width:480px) {
-	  aside {
-      width: 100%;
-      margin-left: 0;
 
-      .featured-article {
-      	width: 100%;
-      	max-width: 100%;
-      	height: auto;
+	main aside {
+		width: 100%;
+		margin-left: 0;
 
-      	img {
-      		width: 100%;
+      	.featured-article {
+	      	width: 100%;
+	      	max-width: 100%;
+	      	height: auto;
 
+	      	img {
+	      		width: 100%;
+
+	      	}
+
+	      	h3 {
+	      		width: 100%;
+	      		float: none;
+
+	      	}
       	}
 
-      	h3 {
-      		width: 100%;
-      		float: none;
+      	form {
+			max-width: 100%;
+		    margin: 0 auto;
+		
+			fieldset {
+				.form-field {
+				    width: 90%;
+				}
 
-      	}
-      }
-  }
+				.frm_submit {
+		    		width: 10%;
+		    	}
+		    }
+		}
+	}
 }
 
 // @media screen and (max-width:320px) {}
