@@ -1170,7 +1170,8 @@ table {
   #home .alignright, #inside .alignright {
     float: right; }
   #home .aligncenter, #inside .aligncenter {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block; }
   #home .padding_0, #inside .padding_0 {
     padding: 0; }
@@ -1307,6 +1308,26 @@ table {
 @media only screen and (max-width: 320px) {
   body {
     min-width: 320px; } }
+
+p img.alignleft, p img.alignright, p img.aligncenter {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem; }
+
+.wp-caption.alignleft, .wp-caption.alignright, .wp-caption.aligncenter {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p img.alignleft, .wp-caption.alignleft {
+  margin-right: 1.6rem; }
+
+p img.alignright, .wp-caption.alignright {
+  margin-left: 1.6rem; }
+
+.wp-caption-text {
+  font-family: "Myriad W01 Lt", sans-serif;
+  line-height: 2.4rem;
+  text-align: center;
+  margin-top: 0.8rem; }
 
 header {
   width: 100%;

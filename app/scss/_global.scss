@@ -490,7 +490,7 @@ table {
   .float_none  {float: none;}
   .alignleft   {float: left;}
   .alignright  {float: right;}
-  .aligncenter {margin:0 auto; display: block;}
+  .aligncenter {margin-left: auto; margin-right: auto; display: block;}
 
   /* General Padding */
   .padding_0    {padding: 0;}
@@ -638,6 +638,30 @@ table {
   }
 }
 
-
-
+p img {
+  &.alignleft, &.alignright, &.aligncenter {
+    margin-top: $pica;
+    margin-bottom: $pica;
+  }
+}
+.wp-caption {
+  &.alignleft, &.alignright, &.aligncenter {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+p img, .wp-caption {
+  &.alignleft {
+    margin-right: $pica;
+  }
+  &.alignright {
+    margin-left: $pica;
+  }
+}
+.wp-caption-text {
+  font-family: $myriadLight;
+  line-height: $pica*1.5;
+  text-align: center;
+  margin-top: $pica/2;
+}
 
